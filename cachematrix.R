@@ -3,7 +3,10 @@
 
 ## Write a short comment describing this function
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4dce4e53e5edebf6e13e115ab9478bff9ec481b5
 makeCacheMatrix <- function(x = matrix()) {
       m <- NULL
       set <- function(y) {
@@ -22,8 +25,11 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
         ## Return a matrix that is the inverse of 'x'
+<<<<<<< HEAD
 
 cacheSolve <- function(x, ...) {
+=======
+>>>>>>> 4dce4e53e5edebf6e13e115ab9478bff9ec481b5
       m <- x$getsolve()
       if(!is.null(m)) {
             message("getting cached data")
@@ -32,5 +38,9 @@ cacheSolve <- function(x, ...) {
       data <- x$get()
       m <- solve(data, ...)
       x$setsolve(m)
+<<<<<<< HEAD
       m
+=======
+      m        
+>>>>>>> 4dce4e53e5edebf6e13e115ab9478bff9ec481b5
 }
