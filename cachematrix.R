@@ -3,11 +3,14 @@
 
 ## Write a short comment describing this function
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 4dce4e53e5edebf6e13e115ab9478bff9ec481b5
+
 makeCacheMatrix <- function(x = matrix()) {
+   
+#This function gets the inverse of a matrix and keeps it in the cache
+#For that, it creates and object that caches it
+   
+   
       m <- NULL
       set <- function(y) {
             x <<- y
@@ -21,26 +24,25 @@ makeCacheMatrix <- function(x = matrix()) {
            getsolve = getsolve)
 }
 
+
 ## Write a short comment describing this function
 
-
-        ## Return a matrix that is the inverse of 'x'
-<<<<<<< HEAD
-
 cacheSolve <- function(x, ...) {
-=======
->>>>>>> 4dce4e53e5edebf6e13e115ab9478bff9ec481b5
+      ## Return a matrix that is the inverse of 'x'
+   
+#This function calculates the inverse of a matrix. But,
+   #if it has already been calculated with the function from above,
+   #it just gets the result of the cache and outputs it.
       m <- x$getsolve()
       if(!is.null(m)) {
+         
+         #If the matrix has already been inversed:
+         
             message("getting cached data")
             return(m)
       }
       data <- x$get()
       m <- solve(data, ...)
       x$setsolve(m)
-<<<<<<< HEAD
-      m
-=======
       m        
->>>>>>> 4dce4e53e5edebf6e13e115ab9478bff9ec481b5
 }
