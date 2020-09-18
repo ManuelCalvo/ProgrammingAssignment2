@@ -10,7 +10,7 @@ makeCacheMatrix <- function(x = matrix()) {
 #This function gets the inverse of a matrix and keeps it in the cache
 #For that, it creates and object that caches it
    
-   
+#Creates an object to cache the result:
       m <- NULL
       set <- function(y) {
             x <<- y
@@ -39,8 +39,10 @@ cacheSolve <- function(x, ...) {
          #If the matrix has already been inversed:
          
             message("getting cached data")
-            return(m)
+            return(m) #it returns the cache
       }
+      
+      #Now, if it has not been inversed, it calculates it:
       data <- x$get()
       m <- solve(data, ...)
       x$setsolve(m)
